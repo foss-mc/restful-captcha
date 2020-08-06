@@ -1,0 +1,18 @@
+{
+  "name": "restful-captcha",
+  "description": "restful-captcha",
+  "env": {
+      "SITE_KEY": {
+          "description": "SITE_KEY"
+      },
+      "SECRET_KEY": {
+          "description": "SECRET_KEY"
+      },
+      "CAPTCHA_TYPE": {
+          "description": "reCaptcha-v3 or hCaptcha",
+          "value": "reCaptcha-v3"
+      }
+  },
+  "repository": "https://github.com/foss-mc/restful-captcha",
+  "image": "heroku/nodejs"
+}

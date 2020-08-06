@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+Verifying ...
+
+<%- captcha %>
+
+<form action='/done' method="POST"></form>
+
+<script>
+function cb(token) {
+  var form = document.getElementsByTagName('form')[0];
+
+  var input;
+
+  input = document.createElement('input');
+  input.setAttribute('type', 'hidden');
+  input.setAttribute('name', 'id');
+  input.setAttribute('value', '<%= id %>');
+  form.appendChild(input);
+
+  input = document.createElement('input');
+  input.setAttribute('type', 'hidden');
+  input.setAttribute('name', 'g-recaptcha-response');
+  input.setAttribute('value', token);
+  form.appendChild(input);
+
+  form.submit();
+}
+</script>
+
+</body>
+</html>

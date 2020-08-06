@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+Verifying ...
+
+<%- captchaScript %>
+
+<form action='/done' method="POST">
+<input type='hidden' name='id' value='<%= id %>' />
+<%- captchaDiv %>
+<input type="submit" value="Verify" />
+</form>
+
+</body>
+</html>
